@@ -5,7 +5,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import com.example.aavadhan.fitnessgeek.R;
 import com.example.aavadhan.fitnessgeek.model.ExerciseEntity;
@@ -13,7 +12,6 @@ import com.example.aavadhan.fitnessgeek.model.ExerciseEntity;
 import java.util.List;
 
 public class ExerciseListAdapter extends RecyclerView.Adapter<ExerciseListHolder> {
-    // TODO: Change string to model class
     private List<ExerciseEntity> exerciseList;
 
     public ExerciseListAdapter(List<ExerciseEntity> list) {
