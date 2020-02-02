@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="exercise_row_container_margin">5dp</dimen>
+    <dimen name="exercise_row_details_text_margin">8dp</dimen>
+</resources>
