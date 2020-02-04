@@ -37,7 +37,6 @@ public class ExerciseListActivity extends AppCompatActivity {
         list.add(e1);
         list.add(e2);
 
-        // specify an adapter (see also next example)
         mAdapter = new ExerciseListAdapter(list);
         recyclerView.setAdapter(mAdapter);
     }
