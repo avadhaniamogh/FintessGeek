@@ -1,9 +1,12 @@
 package com.example.aavadhan.fitnessgeek.activities;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.Button;
 
 import com.example.aavadhan.fitnessgeek.R;
 import com.example.aavadhan.fitnessgeek.adapters.ExerciseListAdapter;
@@ -30,6 +33,17 @@ public class ExerciseListActivity extends AppCompatActivity {
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
+        Button button = (Button) findViewById(R.id.button);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+                Intent myIntent = new Intent(ExerciseListActivity.this, AddExerciseActivity.class);
+                ExerciseListActivity.this.startActivity(myIntent);
+            }
+        });
+
         ExerciseEntity e1 = new ExerciseEntity("Reverse Push ups", "50", "3", "10");
         ExerciseEntity e2 = new ExerciseEntity("Hanging Spiderman Swings", "60", "3", "10");
 
@@ -40,4 +54,5 @@ public class ExerciseListActivity extends AppCompatActivity {
         mAdapter = new ExerciseListAdapter(list);
         recyclerView.setAdapter(mAdapter);
     }
+
 }
